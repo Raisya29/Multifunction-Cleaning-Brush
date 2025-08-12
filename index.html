@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multifunction Cleaning Brush - Bestbrand Shop</title>
+    <meta name="description" content="Multifunction Cleaning Brush - Satu alat untuk berbagai kebutuhan bersih-bersih!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1b4332',
+                        'forest-green': '#2d5a3d',
+                        'gold': '#d4af37',
+                        'cream': '#f5f5dc',
+                        'accent-white': '#ffffff'
+                    },
+                    fontFamily: {
+                        'heading': ['Cormorant Garamond', 'serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS untuk override default styles */
+        .ooef {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .ooef-loader {
+            display: none !important;
+        }
+        
+        .ooef form {
+            background: transparent !important;
+        }
+        
+        .ooef .ooef-button {
+            background: linear-gradient(135deg, #d4af37 0%, #b88a00 100%) !important;
+            color: #1b4332 !important;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 600 !important;
+            border-radius: 8px !important;
+            padding: 12px 24px !important;
+            border: none !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+        }
+        
+        .ooef .ooef-button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+        }
+        
+        .ooef input, .ooef select {
+            border: 1px solid #d4af37 !important;
+            border-radius: 8px !important;
+            padding: 10px 15px !important;
+            font-family: 'Open Sans', sans-serif !important;
+        }
+        
+        .ooef label {
+            font-family: 'Open Sans', sans-serif !important;
+            color: #1b4332 !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* Testimonial carousel */
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Lightbox */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Social proof popup */
+        .social-proof-popup {
+            position: fixed;
+            top: 20px;
+            right: -400px;
+            background: white;
+            border-left: 5px solid #d4af37;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            max-width: 350px;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { right: -400px; }
+            to { right: 20px; }
+        }
+        
+        .social-proof-popup img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .social-proof-popup {
+                max-width: 300px;
+                right: -350px;
+            }
+            
+            @keyframes slideIn {
+                from { right: -350px; }
+                to { right: 10px; }
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-dark-green bg-cream">
+    <!-- Social Proof Popup -->
+    <div id="socialProofPopup" class="social-proof-popup hidden">
+        <img id="popupAvatar" src="https://cdn.fastcdnshop.com/image/2022/10/dea3a8099d35bf786afc9e246f888a26360799a30027d3718b1095f07cc1b2f2-600.jpeg" alt="Customer">
+        <div>
+            <p id="popupText" class="text-sm"></p>
+            <p class="text-xs text-gray-500 mt-1">1-15 menit yang lalu</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-dark-green text-accent-white py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-green to-forest-green opacity-90"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Multifunction Cleaning Brush</h1>
+                    <p class="text-xl md:text-2xl mb-6">Satu alat untuk berbagai kebutuhan bersih-bersih!</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Bulu sikat kuat dan desain ergonomis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Membersihkan noda, debu, dan kotoran di sudut sulit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Cocok untuk semua barang kesukaan Anda</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-gold text-dark-green font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Beli Sekarang
+                        </button>
+                        <button class="border-2 border-gold text-gold font-bold py-3 px-8 rounded-lg hover:bg-gold hover:text-dark-green transition-all duration-300">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fade-in">
+                    <img src="https://cdn.fastcdnshop.com/image/2022/10/dea3a8099d35bf786afc9e246f888a26360799a30027d3718b1095f07cc1b2f2-600.jpeg" alt="Multifunction Cleaning Brush" class="rounded-2xl shadow-2xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent"></div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="bg-forest-green py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 text-accent-white">
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Garansi 7 Hari</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Pengiriman Aman</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Pembayaran Aman</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Features -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Kenapa Multifunction Cleaning Brush?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gold border-opacity-20">
+                    <div class="w-16 h-16 rounded-full bg-gold bg-opacity-20 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Desain Ergonomis</h3>
+                    <p>Desain yang nyaman dipegang dan mudah digunakan untuk semua jenis permukaan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gold border-opacity-20">
+                    <div class="w-16 h-16 rounded-full bg-gold bg-opacity-20 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Bulu Sikat Kuat</h3>
+                    <p>Bulu sikat yang tahan lama dan efektif membersihkan noda dan kotoran membandel.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gold border-opacity-20">
+                    <div class="w-16 h-16 rounded-full bg-gold bg-opacity-20 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Multi Fungsi</h3>
+                    <p>Cocok untuk berbagai permukaan dan barang kesukaan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo -->
+    <section class="py-16 bg-forest-green text-accent-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-8">Lihat Demo Produk</h2>
+            <div class="flex justify-center">
+                <div class="w-full max-w-3xl aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="https://video.aliexpress-media.com/play/u/ae_sg_item/2215082982830/p/1/e/6/t/10301/1100104888625.mp4?from=chrome" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Galeri Produk</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="gallery-item cursor-pointer">
+                    <img src="https://cdn.fastcdnshop.com/image/2022/10/4cff6040729a4ef91a8379da4ff6fd43d56857e9574e75a858923bb3e325350d-700.jpeg" alt="Product Gallery 1" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="gallery-item cursor-pointer">
+                    <img src="https://cdn.fastcdnshop.com/image/2022/10/ed0d491adefba61607d7f648dc15b979eaf63b83e7c367b626dd8696c4431f3b-600.jpeg" alt="Product Gallery 2" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="gallery-item cursor-pointer">
+                    <img src="https://cdn.fastcdnshop.com/image/a7ef688a292babb4728afd41641b6d331c51e23b.jpeg" alt="Product Gallery 3" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="gallery-item cursor-pointer">
+                    <img src="https://cdn.fastcdnshop.com/image/2022/10/e7bc0c4b5d56eccd7b9ec5f749f0dea4fdcc2b950f341edd51c548bf5c56288f-600.jpeg" alt="Product Gallery 4" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="gallery-item cursor-pointer">
+                    <img src="https://cdn.fastcdnshop.com/image/2022/10/ce48878e66eb5001a222eaa745555fe6dfd2537a7d7b3e9478852ab37359b08a-600.jpeg" alt="Product Gallery 5" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-forest-green text-accent-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Apa Kata Pelanggan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/d6/75/3f/d6753fd4e448e98d4a89376e2f7489e4.jpg" alt="ennims_" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">ennims_</h4>
+                            <div class="flex text-gold">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-4">"Ga nyangka sikat ini ampuh bgt pas dipake buat cuci sepatu!! Ga nyesel deh beli. Thanks seller!"</p>
+                    <div class="gallery-item cursor-pointer">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasj-m49uvabnh2ew83.webp" alt="Review Media" class="w-20 h-20 rounded-lg object-cover">
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/1d/8f/ce/1d8fced1d8f1610c93ca7c2aa2de23aa.jpg" alt="riski chyo98" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">riski chyo98</h4>
+                            <div class="flex text-gold">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-4">"Pesanan sesuai deskripsi pengemasan cepat, makasi seller 🙏🏻👍🏻"</p>
+                    <div class="gallery-item cursor-pointer">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbkb-m9a3nlqobifl84.webp" alt="Review Media" class="w-20 h-20 rounded-lg object-cover">
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/2c/7b/2b/2c7b2be6c4bc72485b9cff0f8d81f251.jpg" alt="yunimariyatik" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">yunimariyatik</h4>
+                            <div class="flex text-gold">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-4">"brg ok, kualitas ok, pengiriman ok, sellee ok, sudah dites berfungsi dengan baik"</p>
+                    <div class="gallery-item cursor-pointer">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7ra0m-mc8hvuivac7b42.webp" alt="Review Media" class="w-20 h-20 rounded-lg object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Offers -->
+    <section class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Harga Spesial</h2>
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <h3 class="font-heading text-2xl font-bold mb-2">Multifunction Cleaning Brush</h3>
+                    <p class="text-lg mb-4">Satu alat untuk berbagai kebutuhan bersih-bersih!</p>
+                    <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Harga Normal</p>
+                            <p class="text-xl font-bold line-through text-gray-500">Rp 269.000</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Harga Diskon</p>
+                            <p class="text-2xl font-bold text-gold">Rp 193.500</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">Beli Lebih Banyak Hemat Lebih Banyak!</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="border border-gold border-opacity-30 rounded-xl p-4">
+                        <h4 class="font-bold mb-2">Paket 2 PCS</h4>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Harga Normal</p>
+                                <p class="font-bold">Rp 135.000</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Harga Diskon</p>
+                                <p class="font-bold text-gold">Rp 129.400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-gold border-opacity-30 rounded-xl p-4">
+                        <h4 class="font-bold mb-2">Paket 5 PCS</h4>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">Harga Normal</p>
+                                <p class="font-bold">Rp 269.000</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Harga Diskon</p>
+                                <p class="font-bold text-gold">Rp 193.500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 mb-4">🛒 Pembayaran Bank transfer langsung dikirim hari ini</p>
+                    <button class="bg-gold text-dark-green font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="py-16 bg-forest-green text-accent-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Form Pemesanan</h2>
+            <div class="max-w-2xl mx-auto">
+                <!-- OrderOnline Embed Code -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="vera" data-product-slug="multifunction-cleaning-brush" data-product-id="689ad4992aed944f0a0dd102" id="oo-embed-form-multifunction-cleaning-brush-6032" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                            </style>
+                            <div aria-live="polite" role="status">
+                                <div>Loading...</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark-green text-accent-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <p class="mb-2">© 2025 Bestbrand Shop. All rights reserved.</p>
+                <p class="text-sm text-gray-300">Multifunction Cleaning Brush - Satu alat untuk berbagai kebutuhan bersih-bersih!</p>
+            </div>
+        </footer>
+
+        <!-- Lightbox for gallery images -->
+        <div id="lightboxOverlay" class="lightbox-overlay">
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="Lightbox Image" class="rounded-lg">
+                <div class="lightbox-close">&times;</div>
+            </div>
+        </div>
+
+        <script>
+            // OrderOnline Embed Code
+            if (typeof xLogError != 'function') {
+                var xLogError = function (error) {
+                    var req = new XMLHttpRequest();
+                    var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                    var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                    req.open('POST', 'https://api.orderonline.id/log', true);
+                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    req.send(params);
+                };
+            }
+            try {
+                if (typeof xEmbedScript != 'function') {
+                    var xEmbedScript = function () {
+                        !function(w, d, e, v, id, t, s) {
+                            if (d.getElementById(id)) return;
+                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                            s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+                        }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                    };
+                }
+                if (typeof xEmbedInit != 'function') {
+                    var xEmbedInit = function (w, n) {
+                        if (w.ooe) return;
+                        n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+                        if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                    };
+                }
+                xEmbedInit(window);
+                ooe('setup', 'redirect', 'https://vera.orderonline.id');
+                ooe('init', '5f1a7807a9bf807d6c63d963', '689ad4992aed944f0a0dd102', '689ad4992aed944f0a0dd103', 'oo-embed-form-multifunction-cleaning-brush-6032', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+                if (!window.jQuery) {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                        t.addEventListener('load', xEmbedScript);
+                        s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                } else {
+                    xEmbedScript();
+                }
+            } catch (e) {
+                xLogError(e); throw e;
+            }
+
+            // Lightbox functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const lightboxOverlay = document.getElementById('lightboxOverlay');
+                const lightboxImage = document.getElementById('lightboxImage');
+                const lightboxClose = document.querySelector('.lightbox-close');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const imgSrc = this.querySelector('img').src;
+                        lightboxImage.src = imgSrc;
+                        lightboxOverlay.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+                
+                lightboxClose.addEventListener('click', function() {
+                    lightboxOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+                
+                lightboxOverlay.addEventListener('click', function(e) {
+                    if (e.target === lightboxOverlay) {
+                        lightboxOverlay.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+                
+                // Social proof popup
+                const socialProofPopup = document.getElementById('socialProofPopup');
+                const popupText = document.getElementById('popupText');
+                const popupAvatar = document.getElementById('popupAvatar');
+                
+                const customerNames = ['Vina', 'Dina', 'Kartika', 'Lestari', 'Putri', 'Maya Sari', 'Rani', 'Permata', 'Lestari F'];
+                const customerCities = ['Jakarta', 'Surabaya', 'Bandung', 'Medan', 'Bekasi', 'Tangerang', 'Depok', 'Semarang'];
+                
+                function showSocialProof() {
+                    const randomName = customerNames[Math.floor(Math.random() * customerNames.length)];
+                    const randomCity = customerCities[Math.floor(Math.random() * customerCities.length)];
+                    
+                    popupText.innerHTML = `<strong>${randomName}</strong> dari <strong>${randomCity}</strong> baru saja memesan Multifunction Cleaning Brush`;
+                    socialProofPopup.classList.remove('hidden');
+                    
+                    // Auto hide after 5 seconds
+                    setTimeout(() => {
+                        socialProofPopup.classList.add('hidden');
+                    }, 5000);
+                }
+                
+                // Show popup every 8 seconds
+                setInterval(showSocialProof, 8000);
+                
+                // Initial popup after 3 seconds
+                setTimeout(showSocialProof, 3000);
+            });
+        </script>
+    </body>
+</html>
